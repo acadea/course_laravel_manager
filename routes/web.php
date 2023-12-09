@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    \Payment\Facades\Payment::driver('abc')->pay(123);
+//    return view('welcome');
 });
